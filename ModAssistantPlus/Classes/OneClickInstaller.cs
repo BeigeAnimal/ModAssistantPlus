@@ -179,7 +179,7 @@ namespace ModAssistantPlus
                         CommandKey.SetValue("", $"\"{Utils.ExePath}\" \"--install\" \"%1\"");
                     }
 
-                    Utils.SendNotify($"{Protocol} One Click Install handlers registered!");
+                    Utils.SendNotify($"{Protocol} install handlers registered!");
                 }
                 else
                 {
@@ -212,7 +212,7 @@ namespace ModAssistantPlus
                             Registry.ClassesRoot.DeleteSubKeyTree(Protocol);
                         }
                     }
-                    Utils.SendNotify($"{Protocol} One Click Install handlers unregistered!");
+                    Utils.SendNotify($"{Protocol} install handlers unregistered :(!");
                 }
                 else
                 {

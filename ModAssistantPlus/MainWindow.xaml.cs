@@ -229,7 +229,7 @@ namespace ModAssistantPlus
         private void Window_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             About.Instance.PatUp.IsOpen = false;
-            About.Instance.PatButton.IsEnabled = true;
+            About.Instance.PatButton.IsEnabled = false;
         }
     }
 }

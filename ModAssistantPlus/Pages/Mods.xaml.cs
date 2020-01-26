@@ -67,7 +67,7 @@ namespace ModAssistantPlus.Pages
 
             if (App.CheckInstalledMods)
             {
-                MainWindow.Instance.MainText = "Checking Installed Mods...";
+                MainWindow.Instance.MainText = "Checking currently installed mods...";
                 await Task.Run(() => CheckInstalledMods());
                 InstalledColumn.Width = Double.NaN;
                 UninstallColumn.Width = 70;
@@ -79,7 +79,7 @@ namespace ModAssistantPlus.Pages
                 DescriptionColumn.Width = 800;
             }
 
-            MainWindow.Instance.MainText = "Loading Mods...";
+            MainWindow.Instance.MainText = "Loading mods...";
             await Task.Run(() => PopulateModsList());
 
             ModsListView.ItemsSource = ModList;
@@ -92,7 +92,7 @@ namespace ModAssistantPlus.Pages
 
             RefreshModsList();
             ModsListView.Visibility = Visibility.Visible;
-            MainWindow.Instance.MainText = "Finished Loading Mods.";
+            MainWindow.Instance.MainText = "Finished loading mods.";
 
             MainWindow.Instance.InstallButton.IsEnabled = true;
             MainWindow.Instance.GameVersionsBox.IsEnabled = true;

@@ -22,7 +22,7 @@
 						</GridViewColumn>
 						<GridViewColumn Header="Name" DisplayMemberBinding="{Binding ModName}" />
 
-						<GridViewColumn x:Name="InstalledColumn" Header="Installed">
+						<GridViewColumn x:Name="InstalledColumn" Header="Currently Installed">
 							<GridViewColumn.CellTemplate>
 								<DataTemplate>
 									<TextBlock Text="{Binding InstalledVersion}" Foreground="{Binding GetVersionColor}" TextDecorations="{Binding GetVersionDecoration}" />
@@ -30,7 +30,7 @@
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
 
-						<GridViewColumn Header="Latest" DisplayMemberBinding="{Binding ModVersion}" />
+						<GridViewColumn Header="Update Version" DisplayMemberBinding="{Binding ModVersion}" />
 						<GridViewColumn x:Name="DescriptionColumn" Header="Description" Width="750" >
 							<GridViewColumn.CellTemplate>
 								<DataTemplate>
@@ -47,10 +47,10 @@
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
 
-						<GridViewColumn x:Name="UninstallColumn"  Header="Uninstall" Width="70">
+						<GridViewColumn x:Name="UninstallColumn"  Header="Uninstall Mods" Width="100">
 							<GridViewColumn.CellTemplate>
 								<DataTemplate>
-									<Button Name="Uninstall" Content="Uninstall" Visibility="{Binding CanSeeDelete}" IsEnabled="{Binding CanDelete}" Foreground="Red" Tag="{Binding ModInfo}" Click="Uninstall_Click"/>
+									<Button Name="Uninstall" Content="Delete" Visibility="{Binding CanSeeDelete}" IsEnabled="{Binding CanDelete}" Foreground="Red" Background="#1a1a1a" Tag="{Binding ModInfo}" Click="Uninstall_Click"/>
 								</DataTemplate>
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
