@@ -6,9 +6,9 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
-using ModAssistant;
+using ModAssistantPlus;
 
-namespace ModAssistant
+namespace ModAssistantPlus
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -21,16 +21,16 @@ namespace ModAssistant
         public static bool CheckInstalledMods;
         public static bool SelectInstalledMods;
         public static string Version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        public static List<string> SavedMods = ModAssistant.Properties.Settings.Default.SavedMods.Split(',').ToList();
+        public static List<string> SavedMods = ModAssistantPlus.Properties.Settings.Default.SavedMods.Split(',').ToList();
 
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            if (ModAssistant.Properties.Settings.Default.UpgradeRequired)
+            if (ModAssistantPlus.Properties.Settings.Default.UpgradeRequired)
             {
-                ModAssistant.Properties.Settings.Default.Upgrade();
-                ModAssistant.Properties.Settings.Default.UpgradeRequired = false;
-                ModAssistant.Properties.Settings.Default.Save();
+                ModAssistantPlus.Properties.Settings.Default.Upgrade();
+                ModAssistantPlus.Properties.Settings.Default.UpgradeRequired = false;
+                ModAssistantPlus.Properties.Settings.Default.Save();
             }
 
             Version = Version.Substring(0, Version.Length - 2);
@@ -48,10 +48,10 @@ namespace ModAssistant
                 }
             }
 
-            BeatSaberInstallType = ModAssistant.Properties.Settings.Default.StoreType;
-            SaveModSelection = ModAssistant.Properties.Settings.Default.SaveSelected;
-            CheckInstalledMods = ModAssistant.Properties.Settings.Default.CheckInstalled;
-            SelectInstalledMods = ModAssistant.Properties.Settings.Default.SelectInstalled;
+            BeatSaberInstallType = ModAssistantPlus.Properties.Settings.Default.StoreType;
+            SaveModSelection = ModAssistantPlus.Properties.Settings.Default.SaveSelected;
+            CheckInstalledMods = ModAssistantPlus.Properties.Settings.Default.CheckInstalled;
+            SelectInstalledMods = ModAssistantPlus.Properties.Settings.Default.SelectInstalled;
 
             if (e.Args.Length == 0)
             {

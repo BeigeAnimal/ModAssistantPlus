@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModAssistant.Pages
+namespace ModAssistantPlus.Pages
 {
     /// <summary>
     /// Interaction logic for Intro.xaml

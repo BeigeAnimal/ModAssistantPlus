@@ -19,7 +19,7 @@ using System.Net;
 using System.Web.Script.Serialization;
 using System.Web;
 
-namespace ModAssistant.Pages
+namespace ModAssistantPlus.Pages
 {
     /// <summary>
     /// Interaction logic for Options.xaml
@@ -184,7 +184,7 @@ namespace ModAssistant.Pages
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Utils.Constants.TeknikAPIUrl + "Paste");
             request.AutomaticDecompression = DecompressionMethods.GZip;
-            request.UserAgent = "ModAssistant/" + App.Version;
+            request.UserAgent = "ModAssistantPlus/" + App.Version;
             request.Method = "POST";
             request.ContentType = "application/x-www-form-urlencoded";
             request.ContentLength = byteArray.Length;

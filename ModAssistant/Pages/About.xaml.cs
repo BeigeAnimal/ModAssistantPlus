@@ -17,7 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModAssistant.Pages
+namespace ModAssistantPlus.Pages
 {
     /// <summary>
     /// Interaction logic for Page1.xaml
@@ -49,7 +49,7 @@ namespace ModAssistant.Pages
             Utils.WeebCDNRandomResponse Pat;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Utils.Constants.WeebCDNAPIURL + "pats/random");
             request.AutomaticDecompression = DecompressionMethods.GZip;
-            request.UserAgent = "ModAssistant/" + App.Version;
+            request.UserAgent = "ModAssistantPlus/" + App.Version;
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             using (Stream stream = response.GetResponseStream())

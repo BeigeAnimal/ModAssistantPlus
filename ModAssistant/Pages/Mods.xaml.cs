@@ -18,7 +18,7 @@ using System.IO.Compression;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace ModAssistant.Pages
+namespace ModAssistantPlus.Pages
 {
     /// <summary>
     /// Interaction logic for Mods.xaml
@@ -114,7 +114,7 @@ namespace ModAssistant.Pages
             string json = string.Empty;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Utils.Constants.BeatModsAPIUrl + "mod");
             request.AutomaticDecompression = DecompressionMethods.GZip;
-            request.UserAgent = "ModAssistant/" + App.Version;
+            request.UserAgent = "ModAssistantPlus/" + App.Version;
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             using (Stream stream = response.GetResponseStream())
@@ -204,7 +204,7 @@ namespace ModAssistant.Pages
             string json = string.Empty;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Utils.Constants.BeatModsAPIUrl + Utils.Constants.BeatModsModsOptions + "&gameVersion=" + MainWindow.GameVersion);
             request.AutomaticDecompression = DecompressionMethods.GZip;
-            request.UserAgent = "ModAssistant/" + App.Version;
+            request.UserAgent = "ModAssistantPlus/" + App.Version;
 
             try
             {
@@ -365,7 +365,7 @@ namespace ModAssistant.Pages
         private byte[] DownloadMod (string link)
         {
             WebClient webClient = new WebClient();
-            webClient.Headers.Add("user-agent", "ModAssistant/" + App.Version);
+            webClient.Headers.Add("user-agent", "ModAssistantPlus/" + App.Version);
             byte[] zip = webClient.DownloadData(link);
             return zip;
         }

@@ -16,10 +16,10 @@ using System.Net;
 using System.IO;
 using System.Web.Script.Serialization;
 using System.Runtime.Serialization;
-using ModAssistant.Pages;
+using ModAssistantPlus.Pages;
 using System.Reflection;
 
-namespace ModAssistant
+namespace ModAssistantPlus
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -64,7 +64,7 @@ namespace ModAssistant
             string json = string.Empty;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Utils.Constants.BeatModsAPIUrl + "version");
             request.AutomaticDecompression = DecompressionMethods.GZip;
-            request.UserAgent = "ModAssistant/" + App.Version;
+            request.UserAgent = "ModAssistantPlus/" + App.Version;
 
             versions = null;
             try
