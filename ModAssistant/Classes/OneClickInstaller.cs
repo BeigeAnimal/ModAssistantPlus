@@ -12,7 +12,7 @@ using Microsoft.Win32;
 using System.IO.Compression;
 using System.Web.Script.Serialization;
 
-namespace ModAssistant
+namespace ModAssistantPlus
 {
     class OneClickInstaller
     {
@@ -54,7 +54,7 @@ namespace ModAssistant
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(BeatSaverURLPrefix + "/api/maps/detail/" + Key);
             request.AutomaticDecompression = DecompressionMethods.GZip;
-            request.UserAgent = "ModAssistant/" + App.Version;
+            request.UserAgent = "ModAssistantPlus/" + App.Version;
 
             try
             {
@@ -172,10 +172,10 @@ namespace ModAssistant
                     if (CommandKey == null)
                         CommandKey = Registry.ClassesRoot.CreateSubKey(@"shell\open\command", true);
 
-                    if (ProtocolKey.GetValue("OneClick-Provider", "").ToString() != "ModAssistant")
+                    if (ProtocolKey.GetValue("OneClick-Provider", "").ToString() != "ModAssistantPlus")
                     {
                         ProtocolKey.SetValue("URL Protocol", "", RegistryValueKind.String);
-                        ProtocolKey.SetValue("OneClick-Provider", "ModAssistant", RegistryValueKind.String);
+                        ProtocolKey.SetValue("OneClick-Provider", "ModAssistantPlus", RegistryValueKind.String);
                         CommandKey.SetValue("", $"\"{Utils.ExePath}\" \"--install\" \"%1\"");
                     }
 
@@ -207,7 +207,7 @@ namespace ModAssistant
                     using (RegistryKey ProtocolKey = Registry.ClassesRoot.OpenSubKey(Protocol, true))
                     {
                         if (ProtocolKey != null
-                            && ProtocolKey.GetValue("OneClick-Provider", "").ToString() == "ModAssistant")
+                            && ProtocolKey.GetValue("OneClick-Provider", "").ToString() == "ModAssistantPlus")
                         {
                             Registry.ClassesRoot.DeleteSubKeyTree(Protocol);
                         }
@@ -235,7 +235,7 @@ namespace ModAssistant
         {
             RegistryKey ProtocolKey = Registry.ClassesRoot.OpenSubKey(Protocol);
             if (ProtocolKey != null
-                && ProtocolKey.GetValue("OneClick-Provider", "").ToString() == "ModAssistant")
+                && ProtocolKey.GetValue("OneClick-Provider", "").ToString() == "ModAssistantPlus")
                 return true;
             else
                 return false;

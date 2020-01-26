@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using ModAssistant.Pages;
+using ModAssistantPlus.Pages;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModAssistant
+namespace ModAssistantPlus
 {
     public class Mod
     {

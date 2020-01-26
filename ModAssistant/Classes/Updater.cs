@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows;
 
-namespace ModAssistant
+namespace ModAssistantPlus
 {
     class Updater
     {
@@ -26,7 +26,7 @@ namespace ModAssistant
             string json = string.Empty;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(APILatestURL);
             request.AutomaticDecompression = DecompressionMethods.GZip;
-            request.UserAgent = "ModAssistant/" + App.Version;
+            request.UserAgent = "ModAssistantPlus/" + App.Version;
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             using (Stream stream = response.GetResponseStream())
