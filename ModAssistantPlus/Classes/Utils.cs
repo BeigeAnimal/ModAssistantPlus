@@ -61,7 +61,7 @@ namespace ModAssistantPlus
             public string ext;
         }
 
-        public static void SendNotify(string message, string title = "Mod Assistant")
+        public static void SendNotify(string message, string title = "Mod Assistant Plus")
         {
             var notification = new System.Windows.Forms.NotifyIcon()
             {
@@ -92,7 +92,7 @@ namespace ModAssistantPlus
             }
             catch
             {
-                MessageBox.Show("Mod Assistant needs to run this task as Admin. Please try again.");
+                MessageBox.Show("Mod Assistant Plus needs to run this task as an Admin. Please try again.");
             }
             if (Close)
                 App.Current.Shutdown();
@@ -298,7 +298,7 @@ namespace ModAssistantPlus
         {
             var dialog = new Microsoft.Win32.SaveFileDialog()
             {
-                Title = "Select your Beat Saber install folder",
+                Title = "Please select your Beat Saber installation folder",
                 Filter = "Directory|*.this.directory",
                 FileName = "select"
             };

@@ -26,7 +26,6 @@
 		
 		<TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="48" Margin="0">Welcome to Mod Assistant+!</TextBlock>
 		<TextBlock Grid.Row="1" FontWeight="Bold" Text="Please read this page entirely and carefully" Margin="0" FontSize="28" />
-    <TextBlock Grid.Row="2" Margin="0,5" FontSize="16" TextWrapping="Wrap" Text="This program is not the official ModAssistant." />
 		<TextBlock Grid.Row="2" Margin="0,5" FontSize="16" TextWrapping="Wrap" Text="By using this program, you attest to have read and agree to the following terms:" />
 
 		<TextBlock Grid.Row="3" Margin="0,5" FontSize="16" TextWrapping="Wrap">
@@ -50,7 +49,7 @@
 		</TextBlock>
 
 		<TextBlock Grid.Row="8" Margin="0,5" FontSize="16" TextWrapping="Wrap">
-			If I keep seeing people leave negative reviews <Italic>because</Italic> mods broke, <LineBreak/><Bold>I will personally kill mods with a rusty spoon with no remorse</Bold>
+			If I keep seeing people leave negative reviews <Italic>because</Italic> mods broke, <LineBreak/><Bold>I will personally kill mods with a rusty frying pan with no remorse</Bold>
 		</TextBlock>
 
 		<TextBlock Grid.Row="9" Margin="0,5" FontSize="16" TextWrapping="Wrap">
