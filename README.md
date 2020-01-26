@@ -10,4 +10,4 @@ Has features such as:
 * One Click Installs support
 * Dark Mode (well, kinda)
 
-![Preview](https://assistant.moe/files/ModAssistant.png)
+![Preview](https://imgur.com/UEmsgII)
