@@ -29,11 +29,11 @@
 		<TextBlock Grid.Row="2" Margin="0,5" FontSize="16" TextWrapping="Wrap" Text="By using this program attest to have read and agree to the following terms:" />
 
 		<TextBlock Grid.Row="3" Margin="0,5" FontSize="16" TextWrapping="Wrap">
-			Beat Saber <Bold>does not</Bold> natively support mods. This means:
+			Beat Saber <Bold>doesn't</Bold> natively support mods. This means:
 		</TextBlock>
 
 		<TextBlock Grid.Row="4" Margin="15,5" FontSize="16" TextWrapping="Wrap">
-			Mods <Bold>will break</Bold> every update. This is normal, and <Bold>not</Bold> Beat Games' fault.
+			Mods <Bold>will sometimes break</Bold> after an update. This is normal, and it's <Bold>not</Bold> Beat Games' fault.
 		</TextBlock>
 
 		<TextBlock Grid.Row="5" Margin="15,5" FontSize="16" TextWrapping="Wrap">
@@ -62,12 +62,12 @@
 		<StackPanel Margin="10" Grid.Row="10" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 			<Button Margin="0,0,10,0" Name="Agree" Height="35" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Agree_Click">
 				<TextBlock FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center">
-					I Agree
+					Accept
 				</TextBlock>
 			</Button>
 			<Button Margin="10,0,0,0" Name="Disagree" Height="35" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Disagree_Click">
 				<TextBlock FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center">
-					Disagree
+					Decline
 				</TextBlock>
 			</Button>
 		</StackPanel>
