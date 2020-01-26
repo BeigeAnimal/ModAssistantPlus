@@ -135,7 +135,7 @@ namespace ModAssistant
             {
                 Properties.Settings.Default.AllGameVersions = versionsString;
                 Properties.Settings.Default.Save();
-                Utils.ShowMessageBoxAsync("It looks like there's been a game update.\n\nPlease double check that the correct version is selected at the bottom left corner!", "New Game Version Detected!");
+                Utils.ShowMessageBoxAsync("Hmm, it looks like there's been a game update.\n\nPlease check that the correct version is selected at the bottom left corner.", "New Game Version Detected!");
                 return versions[0];
             }
 
