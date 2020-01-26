@@ -9,12 +9,12 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Management;
-using ModAssistant.Properties;
+using ModAssistantPlus.Properties;
 using System.Net;
 using System.Diagnostics;
 using System.Security.Principal;
 
-namespace ModAssistant
+namespace ModAssistantPlus
 {
     public class Utils
     {
@@ -343,7 +343,7 @@ namespace ModAssistant
         public static void Download(string link, string output)
         {
             WebClient webClient = new WebClient();
-            webClient.Headers.Add("user-agent", "ModAssistant/" + App.Version);
+            webClient.Headers.Add("user-agent", "ModAssistantPlus/" + App.Version);
 
             byte[] file = webClient.DownloadData(link);
             File.WriteAllBytes(output, file);
