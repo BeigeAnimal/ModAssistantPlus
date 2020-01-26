@@ -71,7 +71,6 @@
             <Button Margin="5" Height="30" Width="80" Content="Open Logs" Click="OpenLogsDirButton_Click"/>
             <Button Margin="5" Height="30" x:Name="YeetBSIPA" Width="100" Content="Uninstall BSIPA" Click="YeetBSIPAButton_Click"/>
             <Button Margin="5" Height="30" Width="110" Background="Red" Content="Remove All Mods" Click="YeetModsButton_Click"/>
-	    <Button Margin="5" Height="30" Width="110" Content="Dark Mode" Click="DarkMode_Click"/>
         </StackPanel>
 
     </Grid>
