@@ -10,4 +10,4 @@ Has features such as:
 * One Click Installs support
 * Dark Mode (well, kinda)
 
-![Preview](https://imgur.com/a/P0GLNAQ)
+![Preview](https://i.imgur.com/UEmsgII.png)
